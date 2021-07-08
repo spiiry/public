@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>FUME-ELIXIR</title>
+    <link rel="icon" type="image/svg" href="https://image.flaticon.com/icons/png/512/1661/1661999.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=480">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/fonts.css">
+    <link type="text/css" rel="stylesheet" href="css/owl.carousel.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Almarai|Baloo+Bhaijaan&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="subid.js"></script>
+
+    <!-- code begins here -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 12px;
+        }
+
+        .label-container {
+            position: fixed;
+            bottom: 48px;
+            right: 105px;
+            display: table;
+            visibility: hidden;
+        }
+
+        .label-text {
+            color: #FFF;
+            background: rgba(51, 51, 51, 0.5);
+            display: table-cell;
+            vertical-align: middle;
+            padding: 10px;
+            border-radius: 3px;
+        }
+
+        .button-float-lp12 {
+            height: 60%;
+            width: 60%;
+            padding: 15px;
+            fill: #fff;
+        }
+
+        .label-arrow {
+            display: table-cell;
+            vertical-align: middle;
+            color: #333;
+            opacity: 0.5;
+        }
+
+        .float {
+            position: fixed;
+            width: 80px;
+            height: 80px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #FF0000;
+            color: #FFF;
+            border-radius: 100%;
+            text-align: center;
+            box-shadow: 2px 2px 3px #999;
+        }
+
+        .my-float {
+            font-size: 24px;
+            margin-top: 18px;
+        }
+
+        a.float+div.label-container {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s ease;
+        }
+
+        a.float:hover+div.label-container {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+    <!-- code ends here -->
+
+    <style>
+        input,
+        .arabic-font {
+            font-family: 'Almarai', sans-serif;
+             !important;
+        }
+
+        .arab-font {
+            font-family: 'Baloo Bhaijaan', cursive;
+             !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_wrapper">
+        <header class="offer_section">
+            <div class="title_block">
+                <h1 class="main_title">Fume-Elixir</h1>
+                <h2 class="main_subtitle arabic-font">التوصيل بالمجان ـ اليوم فقط</h2>
+            </div>
+            <div class="box">
+                <img src="img/unnamed.jpg" alt="">
+                <div class="sale arabic-font"><span>تخفيض %50</span></div>
+
+                <div class="price clearfix ">
+                    <div class="old">
+                        الثمن الأصلي
+                        <p><span class="price_old9522">400 DHS</span><small class="price_currency"></small></p>
+                    </div>
+                    <div class="new">
+                        الثمن الحالي
+                        <p><span class="price_only9522">219 DHS</span><small class="price_currency"></small></p>
+                    </div>
+                </div>
+
+                <div class="timer arabic-font">
+                    <p>ينتهي العرض خلال</p>
+                    <div class="timer_container">
+                        <div class="timer_block">
+                            <div class="count hours"><span>0</span><span>6</span></div>
+                            <div class="text">ساعات</div>
+                        </div>
+                        <div class="timer_block">
+                            <div class="count minutes"><span>2</span><span>3</span></div>
+                            <div class="text">دقيقة</div>
+                        </div>
+                        <div class="timer_block">
+                            <div class="count seconds"><span>4</span><span>3</span></div>
+                            <div class="text">ثانية</div>
+                        </div>
+                    </div>
+                </div>
+                <form id="order_form" class="main-order-form m1-form orderformcdn" action="https://sheetdb.io/api/v1/zd6vr2g5jvzt2" method="POST" style="direction: rtl;">
+                    <h3>
+                        <p class="arab-font">إملأ المعلومات الأن</h3>
+                    </p>
+                    <p class="arabic-font">تخفيض اليوم فقط <span>50%</span></p>
+                    <input type="text" name="data[name]" placeholder="الإسم" />
+                    <input type="text" name="data[adresse]" placeholder="العنوان" />
+                    <input type="text" name="data[ville]" placeholder="المدينة" />
+                    <input type="tel" name="data[phone]" id="phone" placeholder="رقم الهاتف" min="10" max="10" />
+                    <!--- URL  -->
+                    <p id="myurl"></p>
+                    <script>
+                        document.getElementById("myurl").innerHTML = '<select  name="data[url]" style="display: none;"><option value="' + window.location.href + '" >url</option></select>';
+                    </script>
+                    <!--- URL  -->
+                    <p id="time"></p>
+                    <script>
+                        const timezone = new Date();
+                        document.getElementById("time").innerHTML = '<select  name="data[timezone]" style="display: none;"><option value="' + timezone + '" >time</option></select>';
+                    </script>
+                    <!-- END -->
+                    <select name="data[offre]" id="pet-select">
+						<option value="Tadkhin offre 219 dhs x1">  اطلب واحدة ب  219 درهم </option>
+						<option value="Tadkhin offre 349 dhs x2">   اطلب اثنين ب 349 درهم</option>
+					</select>
+                    <button class="button-m arab-font" type="submit">أطلب الأن</button>
+                </form>
+                <div class="action_info">
+                    <div class="customer_protection arabic-font">التوصيل بالمجان اليوم فقط</div>
+                    <div class="prod_count">
+                        <p class="arabic-font">لم يتبقى سوى 10 قطع</p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+        </header>
+
+        <div class="reviews">
+
+
+            <img src="img/unnamed(1).png" alt="">
+            <img src="img/unnamed(2).png" alt="">
+        </div>
+        <a href="#order_form" class="button-m arab-font">أطلب الأن</a> <br><br>
+
+
+
+        <section class="sect7 arab-font">
+            <h2 class="title">
+                <p class="arab-font">تعليقات بعض الزبناء </p><span class="arab-font">من العالم العربي</span></h2>
+            <div class="rev_rate arabic-font" style="font-size:24px">
+                أراء الزبناء <span>4.9</span>
+            </div>
+            <div class="reviews">
+                <img src="img/unnamed(6).jpg" alt="">
+                <img src="img/unnamed(7).jpg" alt="">
+                <img src="img/unnamed(8).jpg" alt="">
+                <br><br>
+                <a href="#order_form" class="button-m arab-font">أطلب الأن</a>
+        </section>
+        <header class="offer_section">
+            <div class="title_block">
+                <h1 class="main_title">Flawless Body </h1>
+                <h2 class="main_subtitle arabic-font">التوصيل بالمجان ـ اليوم فقط</h2>
+            </div>
+            <div class="box">
+                <img src="img/unnamed.jpg" alt="">
+                <div class="sale arabic-font"><span>تخفيض %50</span></div>
+
+                <div class="price clearfix ">
+                    <div class="old">
+                        الثمن الأصلي
+                        <p><span class="price_old9522">400 DHS</span><small class="price_currency"></small></p>
+                    </div>
+                    <div class="new">
+                        الثمن الحالي
+                        <p><span class="price_only9522"> 219  DHS</span><small class="price_currency"></small></p>
+                    </div>
+                </div>
+
+                <div class="timer arabic-font">
+                    <p>ينتهي العرض خلال</p>
+                    <div class="timer_container">
+                        <div class="timer_block">
+                            <div class="count hours"><span>0</span><span>6</span></div>
+                            <div class="text">ساعات</div>
+                        </div>
+                        <div class="timer_block">
+                            <div class="count minutes"><span>2</span><span>3</span></div>
+                            <div class="text">دقيقة</div>
+                        </div>
+                        <div class="timer_block">
+                            <div class="count seconds"><span>4</span><span>3</span></div>
+                            <div class="text">ثانية</div>
+                        </div>
+                    </div>
+                </div>
+                <form id="order_form" class="main-order-form m1-form orderformcdn" action="https://sheetdb.io/api/v1/zd6vr2g5jvzt2" method="POST" style="direction: rtl;">
+                    <h3>
+                        <p class="arab-font">إملأ المعلومات الأن</h3>
+                    </p>
+                    <p class="arabic-font">تخفيض اليوم فقط <span>50%</span></p>
+                    <input type="text" name="data[name]" placeholder="الإسم" />
+                    <input type="text" name="data[adresse]" placeholder="العنوان" />
+                    <input type="text" name="data[ville]" placeholder="المدينة" />
+                    <input type="tel" name="data[phone]" id="phone" placeholder="رقم الهاتف" />
+                    <!--- URL  -->
+                    <p id="myurl"></p>
+                    <script>
+                        document.getElementById("myurl").innerHTML = '<select  name="data[url]" style="display: none;"><option value="' + window.location.href + '" >url</option></select>';
+                    </script>
+                    <!--- time  -->
+                    <p id="time"></p>
+                    <script>
+                        const timezone = new Date();
+                        document.getElementById("time").innerHTML = '<select  name="data[timezone]" style="display: none;"><option value="' + timezone + '" >time</option></select>';
+                    </script>
+                    <!-- END -->
+                    <select name="data[offre]" id="pet-select">
+						<option value="Tadkhin offre 219 dhs x1">  اطلب واحدة ب  219 درهم </option>
+						<option value="Tadkhin offre 349 dhs x2">   اطلب اثنين ب 349 درهم</option>
+					</select>
+                    <button class="button-m arab-font" type="submit">أطلب الأن</button>
+                </form>
+                <div class="action_info">
+                    <div class="customer_protection arabic-font">التوصيل بالمجان اليوم فقط</div>
+                    <div class="prod_count">
+                        <p class="arabic-font">لم يتبقى سوى 10 قطع</p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+        </header>
+        <footer class="footer_section copyright">
+            <div class="footer_text" style="text-align: center"></div>
+        </footer>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script>
+            var form = document.getElementById('order_form');
+            form.addEventListener("submit", e => {
+                e.preventDefault();
+                fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(document.getElementById("order_form")),
+                }).then(
+                    response => response.json()
+                ).then((html) => {
+                    // you can put any JS code here
+                    window.location.href = "Thanks.html";
+                });
+            });
+            <script>
+          
+          
+                <!-- Global site tag (gtag.js) - Google Ads: 340022944 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-340022944"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-340022944');
+</script>
+
+
+<!-- Event snippet for Compra conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-340022944/M17tCPq-yNECEKCtkaIB',
+      'transaction_id': ''
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+</body>
+
+</html>
